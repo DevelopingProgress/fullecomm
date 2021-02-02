@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Ecommerce</title>
+</head>
+
+<body onload="render()">
+    <header id="header">
+        <nav class="navbar navbar-expand-md navbar-dark text-white" style="background:   #2E826E;">
+            <a class="text-white navbar-brand ms-2 animate__animated animate__slideInDown" href="index.html">
+                <i class="fab fa-pagelines animate flash"></i> Organic Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="navbar-collapse collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-3">
+                    <li class="nav-item">
+                        <a href="#fruit" class="nav-link">Fruit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#juice" class="nav-link">Juice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#salad" class="nav-link">Salad</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <a style="cursor: pointer;"  class="text-white nav-link" href="cart.php">
+                        <i class="text-warning fas fa-shopping-cart">
+                            </i> Shopping Cart
+                        <i style="color: yellow;" id="cart_n"></i>
+                    </a>
+                </form>
+                <a href="#ModalCenter" style="cursor: pointer;" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#ModalCenter">
+                    <i class="far fa-user"></i> Administator
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main role="main" id="main">
+        <section id="banner-area">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/carousel/slide3.jpg" class="d-block w-100 imgFilter" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h1>Organic Store</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque ipsa porro ullam eveniet animi unde maxime explicabo voluptatum? At error fugit sequi sapiente ut!</p>
+                      <p><a href="#" role="button" class="btn btn-lg btn-primary">Products</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/carousel/slide2.jpg" class="d-block w-100 imgFilter" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                      <h1>Organic Store</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium omnis unde quis, nesciunt excepturi beatae voluptatibus aperiam ut quod repudiandae soluta nobis? Libero, architecto?</p>
+                      <p><a href="#" role="button" class="btn btn-lg btn-primary">Products</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/carousel/slide1.jpg" class="d-block w-100 imgFilter" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block text-start">
+                        <h1>Organic Store</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium omnis unde quis, nesciunt excepturi beatae voluptatibus aperiam ut quod repudiandae soluta nobis? Libero, architecto?</p>
+                        <p><a href="#" role="button" class="btn btn-lg btn-primary">Products</a></p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                  <span class="btn btn-lg bg-white" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span class="btn btn-lg bg-white" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div>
+        </section>
+
+        <section id="marketing">
+            <div class="container marketing">
+                <h2 id="fruit" style="padding-top: 65px;">Fruit</h2>
+                <hr>
+                <div class="row" id="fruitDIV"></div>
+                <h2 id="juice" style="padding-top: 65px;">Juice</h2>
+                <hr>
+                <div class="row" id="juiceDIV"></div>
+                <h2 id="salad" style="padding-top: 65px;">Salad</h2>
+                <hr>
+                <div class="row" id="saladDIV"></div>
+                <hr class="feat-div">
+            </div>
+            <!-- MODAL -->
+            <div class="modal fade" id="ModalCenter" tabindex="-1" aria-labelledby="ModalCenterLabel" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalCenterLabel">ADMINISTRATOR</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        <div class="modal-body">
+                                <div class="mb-3">
+                                    <div class="mt-3 mb-3">
+                                        <form id="formA" autocomplete="off" class="text-center border border-light p-5">
+                                            <p class="h4 mb-4">Login</p>
+                                            <label for="Aemail" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="Aemail">
+                                            <label for="Apassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="Apassword">
+                                            <button type="submit" class="btn mt-5" style="background: #2E826E; color: white;">Log in</button>
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL -->
+        </section>
+            <footer id="footer" class="bg-secondary text-white py-5  mt-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-12">
+                            <h4 class="font-rubik font-size-20">Organic Store</h4>
+                            <p class="font-size-14 font-raleway text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nihil!</p>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <h4 class="font-rubik font-size-20">Newsletter</h4>
+                            <form class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email *">
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn mb-2 border-light" style="background: #2E826E; color: white;">Zasubskrybuj</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <h4 class="font-rubik font-size-20">Informacje</h4>
+                            <div class="d-flex flex-column flex-wrap">
+                                <a href="" class="font-raleway font-size-14 text-white-50 pb-1 text-decoration-none">O nas</a>
+                                <a href="" class="font-raleway font-size-14 text-white-50 pb-1 text-decoration-none">Informacje o dostawie</a>
+                                <a href="" class="font-raleway font-size-14 text-white-50 pb-1 text-decoration-none">Polityka Prywatności</a>
+                                <a href="" class="font-raleway font-size-14 text-white-50 pb-1 text-decoration-none">Regulamin sklepu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <!-- JAVASCRIPT -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- wow -->
+    <script src="js/wow.js"></script>
+    <!-- custom js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

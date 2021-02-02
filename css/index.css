@@ -1,0 +1,49 @@
+.marketing .col-lg-4{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.marketing h2{
+    font-weight: 400;
+}
+.marketing .col-lg-4{
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+.feat-div{
+    margin: 5rem 0;
+}
+.feat-header{
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.5rem;
+}
+@media(min-width:40em){
+    .carousel-caption p{
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+    .feat-header{
+        font-size: 50px;
+    }
+}
+@media(min-width:62em){
+    .feat-header{
+        margin-top: 7rem;
+    }
+}
+@media(max-width:400px){
+    .carousel.figures{
+        display: none;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+.imgFilter{
+    filter: brightness(0.80);
+}
+body{
+    background: #FCF9F4;
+}
+
